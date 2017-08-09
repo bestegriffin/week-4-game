@@ -19,12 +19,10 @@ $(document).ready(function() {
 		totemFourValue = 1 + Math.floor(Math.random() * 12);
 		
 		userTallyScore = 0;
-		// update the html for the game board
 		$("#winsTally").html("Wins: " + wins);
 		$("#lossesTally").html("Losses: " + losses);
 		$("#randomNumber").html(randomComputerNumber);
 		$("#userScore").html(userTallyScore);
-		// consoleLogVariables();
 	}
 
 	function hasUserWonOrLost() {
@@ -45,17 +43,6 @@ $(document).ready(function() {
 		}
 	}
 
-	// debugging functionality function
-	// function consoleLogVariables() {
-	// 	console.log("wins: " + wins + " losses: " + losses);
-	// 	console.log("totemOneValue: ", totemOneValue + " totemTwoValue: " + totemTwoValue + " totemThreeValue: " + totemThreeValue + " totemFourValue: " + totemFourValue);
-	// 	console.log("randomComputerNumber: " + randomComputerNumber + " userTallyScore: " + userTallyScore);
-	// 	console.log("----------------------------------");
-
-	// }
-
-	
-
 	initializeVariables();
 
 	$(".totem").off("click").on("click" , function() {
@@ -75,8 +62,7 @@ $(document).ready(function() {
         }
   
         $("#userScore").html(userTallyScore);
-        // consoleLogVariables();
-   
+        
         hasUserWonOrLost();
 	});
     
